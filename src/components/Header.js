@@ -5,13 +5,13 @@ const onClick = () => {
     console.log('Click');
 }
 
-const Header = ({ title }) => {
+const Header = ({ title, onAdd, showAdd }) => {
   return (
-    <header>
+    <header className='header'>
         <h1>
             { title }
         </h1>
-        <Button color= 'green' text='Hello' onClick={onClick} />
+    <Button color={showAdd ? 'black' : 'green'} text={showAdd ? 'Close' : 'Add'} onClick={onAdd} />
     </header>
   )
 }
